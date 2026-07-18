@@ -23,9 +23,9 @@ export default function Hero() {
   const firstNames = nameParts.join(' ')
 
   return (
-    <section className="relative min-h-[calc(100vh-80px)] overflow-hidden">
+    <section className="relative overflow-hidden pb-16 pt-24 sm:pb-20 sm:pt-28 lg:pb-24 lg:pt-32 xl:min-h-[calc(100vh-80px)] xl:pb-0 xl:pt-20">
       <div className="pointer-events-none absolute inset-0">
-        <div className="hero-grid absolute inset-0 opacity-50" />
+        <div className="hero-grid absolute inset-0 opacity-35 sm:opacity-45" />
 
         <motion.div
           animate={{
@@ -38,7 +38,7 @@ export default function Hero() {
             repeat: Number.POSITIVE_INFINITY,
             ease: 'easeInOut',
           }}
-          className="absolute -left-32 top-24 h-[420px] w-[420px] rounded-full bg-violet-600/20 blur-[140px]"
+          className="absolute -left-52 top-20 h-[340px] w-[340px] rounded-full bg-violet-600/20 blur-[120px] sm:h-[420px] sm:w-[420px] xl:-left-32 xl:top-24"
         />
 
         <motion.div
@@ -52,13 +52,13 @@ export default function Hero() {
             repeat: Number.POSITIVE_INFINITY,
             ease: 'easeInOut',
           }}
-          className="absolute -right-20 top-14 h-[480px] w-[480px] rounded-full bg-purple-500/20 blur-[150px]"
+          className="absolute -right-48 top-[520px] h-[340px] w-[340px] rounded-full bg-purple-500/20 blur-[120px] sm:h-[440px] sm:w-[440px] lg:top-[620px] xl:-right-20 xl:top-14 xl:h-[480px] xl:w-[480px] xl:blur-[150px]"
         />
 
-        <div className="absolute bottom-0 left-1/2 h-64 w-[900px] -translate-x-1/2 rounded-full bg-violet-600/10 blur-[130px]" />
+        <div className="absolute bottom-0 left-1/2 h-48 w-[520px] -translate-x-1/2 rounded-full bg-violet-600/10 blur-[110px] sm:w-[760px] xl:h-64 xl:w-[900px] xl:blur-[130px]" />
       </div>
 
-      <Container className="relative grid min-h-[calc(100vh-80px)] grid-cols-[1.08fr_0.92fr] items-center gap-16 py-20">
+      <Container className="relative grid grid-cols-1 items-center gap-12 sm:gap-16 lg:gap-20 xl:min-h-[calc(100vh-80px)] xl:grid-cols-[1.08fr_0.92fr] xl:gap-16 xl:py-20">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,53 +70,53 @@ export default function Hero() {
         >
           <Badge
             variant="success"
-            className="mb-7 gap-2 px-4 py-2 uppercase tracking-[0.16em]"
+            className="mb-5 gap-2 px-3 py-2 text-[10px] uppercase tracking-[0.14em] sm:mb-7 sm:px-4 sm:text-xs sm:tracking-[0.16em]"
           >
             <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_14px_#34d399]" />
             {heroContent.availability}
           </Badge>
 
-          <p className="mb-3 text-xl font-medium text-slate-300">
+          <p className="mb-2 text-base font-medium text-slate-300 sm:mb-3 sm:text-lg lg:text-xl">
             {heroContent.introduction}
           </p>
 
-          <h1 className="max-w-3xl text-6xl font-bold leading-[1.02] tracking-[-0.055em] text-white">
+          <h1 className="max-w-3xl text-[2.7rem] font-bold leading-[0.98] tracking-[-0.055em] text-white min-[380px]:text-5xl sm:text-6xl lg:text-7xl xl:text-6xl">
             {firstNames}{' '}
             <GradientText>{highlightedName}</GradientText>
           </h1>
 
-          <div className="mt-6 flex items-center gap-3">
-            <div className="h-px w-12 bg-gradient-to-r from-violet-400 to-transparent" />
+          <div className="mt-5 flex items-start gap-3 sm:mt-6 sm:items-center">
+            <div className="mt-4 h-px w-8 shrink-0 bg-gradient-to-r from-violet-400 to-transparent sm:mt-0 sm:w-12" />
 
-            <h2 className="text-3xl font-semibold tracking-tight text-white">
+            <h2 className="text-xl font-semibold leading-tight tracking-tight text-white sm:text-2xl lg:text-3xl">
               {heroContent.role}
             </h2>
           </div>
 
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
+          <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:mt-7 sm:text-lg sm:leading-8">
             {heroContent.headline}
           </p>
 
-          <p className="mt-3 max-w-2xl text-base leading-7 text-slate-500">
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-500 sm:text-base">
             {heroContent.description}
           </p>
 
-          <div className="mt-5 max-w-2xl rounded-2xl border border-violet-400/10 bg-violet-500/[0.045] p-5">
+          <div className="mt-5 max-w-2xl rounded-2xl border border-violet-400/10 bg-violet-500/[0.045] p-4 sm:p-5">
             <div className="flex items-start gap-3">
-              <div className="mt-1 rounded-lg bg-violet-500/10 p-2 text-violet-300">
+              <div className="mt-0.5 shrink-0 rounded-lg bg-violet-500/10 p-2 text-violet-300 sm:mt-1">
                 <Sparkles size={17} />
               </div>
 
-              <p className="text-sm leading-7 text-slate-400">
+              <p className="text-xs leading-6 text-slate-400 sm:text-sm sm:leading-7">
                 {heroContent.aiStatement}
               </p>
             </div>
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-7 grid grid-cols-1 gap-3 sm:mt-9 sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:gap-4">
             <Link
               to={heroContent.primaryAction.href}
-              className="group inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-purple-500 px-6 text-sm font-semibold text-white shadow-[0_14px_45px_rgba(139,92,246,0.35)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_60px_rgba(139,92,246,0.5)]"
+              className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-purple-500 px-6 text-sm font-semibold text-white shadow-[0_14px_45px_rgba(139,92,246,0.35)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_60px_rgba(139,92,246,0.5)] lg:w-auto"
             >
               {heroContent.primaryAction.label}
 
@@ -128,7 +128,8 @@ export default function Hero() {
 
             <a
               href={heroContent.secondaryAction.href}
-              className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-6 text-sm font-semibold text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:border-violet-400/35 hover:bg-white/[0.075]"
+              download
+              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-6 text-sm font-semibold text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:border-violet-400/35 hover:bg-white/[0.075] lg:w-auto"
             >
               <Download size={17} />
               {heroContent.secondaryAction.label}
@@ -136,19 +137,21 @@ export default function Hero() {
 
             <a
               href={heroContent.githubAction.href}
-              className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/10 px-6 text-sm font-semibold text-slate-400 transition duration-300 hover:border-violet-400/35 hover:text-white"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl border border-white/10 px-6 text-sm font-semibold text-slate-400 transition duration-300 hover:-translate-y-0.5 hover:border-violet-400/35 hover:text-white sm:col-span-2 lg:w-auto"
             >
               <GitBranch size={17} />
               {heroContent.githubAction.label}
             </a>
           </div>
 
-          <div className="mt-12">
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-600">
+          <div className="mt-10 sm:mt-12">
+            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-600 sm:text-[11px] sm:tracking-[0.22em]">
               Technologies I work with
             </p>
 
-            <div className="flex max-w-3xl flex-wrap gap-2.5">
+            <div className="flex max-w-3xl flex-wrap gap-2 sm:gap-2.5">
               {heroContent.technologies.map((technology) => (
                 <TechBadge key={technology}>{technology}</TechBadge>
               ))}
@@ -164,9 +167,9 @@ export default function Hero() {
             delay: 0.15,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="relative flex min-h-[610px] items-center justify-center"
+          className="relative mx-auto flex min-h-[390px] w-full max-w-[430px] items-center justify-center sm:min-h-[520px] sm:max-w-[570px] lg:min-h-[590px] lg:max-w-[650px] xl:min-h-[610px] xl:max-w-none"
         >
-          <div className="absolute h-[500px] w-[500px] rounded-full border border-violet-400/15" />
+          <div className="absolute h-[290px] w-[290px] rounded-full border border-violet-400/15 min-[380px]:h-[320px] min-[380px]:w-[320px] sm:h-[430px] sm:w-[430px] lg:h-[480px] lg:w-[480px] xl:h-[500px] xl:w-[500px]" />
 
           <motion.div
             animate={{ rotate: 360 }}
@@ -175,7 +178,7 @@ export default function Hero() {
               repeat: Number.POSITIVE_INFINITY,
               ease: 'linear',
             }}
-            className="absolute h-[450px] w-[450px] rounded-full border border-dashed border-purple-400/25"
+            className="absolute h-[260px] w-[260px] rounded-full border border-dashed border-purple-400/25 min-[380px]:h-[290px] min-[380px]:w-[290px] sm:h-[390px] sm:w-[390px] lg:h-[430px] lg:w-[430px] xl:h-[450px] xl:w-[450px]"
           />
 
           <motion.div
@@ -188,7 +191,7 @@ export default function Hero() {
               repeat: Number.POSITIVE_INFINITY,
               ease: 'easeInOut',
             }}
-            className="absolute h-[410px] w-[410px] rounded-full bg-violet-500/25 blur-[75px]"
+            className="absolute h-[240px] w-[240px] rounded-full bg-violet-500/25 blur-[55px] min-[380px]:h-[270px] min-[380px]:w-[270px] sm:h-[350px] sm:w-[350px] lg:h-[390px] lg:w-[390px] xl:h-[410px] xl:w-[410px] xl:blur-[75px]"
           />
 
           <motion.div
@@ -198,11 +201,13 @@ export default function Hero() {
               repeat: Number.POSITIVE_INFINITY,
               ease: 'easeInOut',
             }}
-            className="relative z-10 h-[360px] w-[360px] overflow-hidden rounded-full border border-violet-300/50 bg-[#0d1021] p-2 shadow-[0_0_45px_rgba(139,92,246,0.55),0_0_110px_rgba(168,85,247,0.25)]"
+            className="relative z-10 h-[220px] w-[220px] overflow-hidden rounded-full border border-violet-300/50 bg-[#0d1021] p-1.5 shadow-[0_0_40px_rgba(139,92,246,0.5),0_0_90px_rgba(168,85,247,0.2)] min-[380px]:h-[245px] min-[380px]:w-[245px] sm:h-[310px] sm:w-[310px] sm:p-2 lg:h-[340px] lg:w-[340px] xl:h-[360px] xl:w-[360px]"
           >
             <img
               src="/images/profile/francis-hero.png"
               alt={heroContent.name}
+              loading="eager"
+              fetchPriority="high"
               className="h-full w-full rounded-full object-cover object-top"
             />
           </motion.div>
@@ -214,23 +219,23 @@ export default function Hero() {
               repeat: Number.POSITIVE_INFINITY,
               ease: 'easeInOut',
             }}
-            className="glass-panel absolute left-0 top-24 z-20 w-52 p-5"
+            className="glass-panel absolute left-0 top-8 z-20 w-[150px] p-3 min-[380px]:w-[165px] sm:left-3 sm:top-16 sm:w-48 sm:p-4 lg:w-52 lg:p-5 xl:left-0 xl:top-24"
           >
-            <div className="mb-4 flex items-center gap-3">
-              <div className="rounded-lg bg-violet-500/12 p-2 text-violet-300">
-                <BriefcaseBusiness size={18} />
+            <div className="mb-2 flex items-center gap-2 sm:mb-4 sm:gap-3">
+              <div className="rounded-lg bg-violet-500/12 p-1.5 text-violet-300 sm:p-2">
+                <BriefcaseBusiness size={16} />
               </div>
 
-              <span className="text-xs text-slate-500">
+              <span className="text-[10px] text-slate-500 sm:text-xs">
                 Current Project
               </span>
             </div>
 
-            <p className="text-sm font-semibold leading-6 text-white">
+            <p className="text-[11px] font-semibold leading-4 text-white sm:text-sm sm:leading-6">
               Sales &amp; Inventory System
             </p>
 
-            <p className="mt-2 text-xs text-slate-500">
+            <p className="mt-1 text-[9px] text-slate-500 sm:mt-2 sm:text-xs">
               Laravel · React · TypeScript
             </p>
           </motion.div>
@@ -242,18 +247,20 @@ export default function Hero() {
               repeat: Number.POSITIVE_INFINITY,
               ease: 'easeInOut',
             }}
-            className="glass-panel absolute right-0 top-32 z-20 w-40 p-4"
+            className="glass-panel absolute right-0 top-20 z-20 w-[125px] p-3 sm:right-4 sm:top-24 sm:w-36 sm:p-4 lg:w-40 xl:right-0 xl:top-32"
           >
-            <div className="flex items-center gap-2 text-violet-300">
-              <MapPin size={16} />
-              <span className="text-xs text-slate-400">Location</span>
+            <div className="flex items-center gap-1.5 text-violet-300 sm:gap-2">
+              <MapPin size={14} />
+              <span className="text-[10px] text-slate-400 sm:text-xs">
+                Location
+              </span>
             </div>
 
-            <p className="mt-3 text-sm font-semibold text-white">
+            <p className="mt-2 text-[11px] font-semibold text-white sm:mt-3 sm:text-sm">
               {heroContent.location}
             </p>
 
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-[9px] text-slate-500 sm:text-xs">
               {heroContent.timezone}
             </p>
           </motion.div>
@@ -265,17 +272,17 @@ export default function Hero() {
               repeat: Number.POSITIVE_INFINITY,
               ease: 'easeInOut',
             }}
-            className="glass-panel absolute bottom-20 right-5 z-20 w-48 p-5"
+            className="glass-panel absolute bottom-5 right-2 z-20 w-[150px] p-3 sm:bottom-12 sm:right-5 sm:w-44 sm:p-4 lg:bottom-16 lg:w-48 lg:p-5 xl:bottom-20"
           >
             <div className="flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_14px_#34d399]" />
+              <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_14px_#34d399] sm:h-2.5 sm:w-2.5" />
 
-              <span className="text-xs font-semibold text-white">
+              <span className="text-[10px] font-semibold text-white sm:text-xs">
                 Available for Work
               </span>
             </div>
 
-            <p className="mt-3 text-xs leading-5 text-slate-500">
+            <p className="mt-2 text-[9px] leading-4 text-slate-500 sm:mt-3 sm:text-xs sm:leading-5">
               Open to internships and entry-level web development roles.
             </p>
           </motion.div>
@@ -287,14 +294,14 @@ export default function Hero() {
               repeat: Number.POSITIVE_INFINITY,
               ease: 'linear',
             }}
-            className="absolute h-[490px] w-[490px]"
+            className="absolute h-[280px] w-[280px] min-[380px]:h-[310px] min-[380px]:w-[310px] sm:h-[420px] sm:w-[420px] lg:h-[470px] lg:w-[470px] xl:h-[490px] xl:w-[490px]"
           >
-            <div className="absolute left-1/2 top-0 -translate-x-1/2 rounded-xl border border-violet-400/20 bg-[#0d1021]/90 p-3 text-violet-300 shadow-[0_0_28px_rgba(139,92,246,0.25)]">
-              <Code2 size={20} />
+            <div className="absolute left-1/2 top-0 -translate-x-1/2 rounded-xl border border-violet-400/20 bg-[#0d1021]/90 p-2 text-violet-300 shadow-[0_0_28px_rgba(139,92,246,0.25)] sm:p-3">
+              <Code2 size={17} className="sm:h-5 sm:w-5" />
             </div>
 
-            <div className="absolute bottom-10 left-0 rounded-xl border border-violet-400/20 bg-[#0d1021]/90 p-3 text-violet-300 shadow-[0_0_28px_rgba(139,92,246,0.25)]">
-              <Sparkles size={20} />
+            <div className="absolute bottom-5 left-0 rounded-xl border border-violet-400/20 bg-[#0d1021]/90 p-2 text-violet-300 shadow-[0_0_28px_rgba(139,92,246,0.25)] sm:bottom-10 sm:p-3">
+              <Sparkles size={17} className="sm:h-5 sm:w-5" />
             </div>
           </motion.div>
         </motion.div>
