@@ -8,7 +8,6 @@ import {
 import { useEffect, useState } from 'react'
 import {
   NavLink,
-  useLocation,
 } from 'react-router-dom'
 import {
   primaryNavigation,
@@ -19,7 +18,6 @@ import { siteConfig } from '../../config/site'
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const location = useLocation()
 
   const mobileNavigation = [
     ...primaryNavigation,
@@ -27,12 +25,7 @@ export default function Navbar() {
       (link) => link.path !== '/recruiter',
     ),
   ]
-
-  useEffect(() => {
-    setMenuOpen(false)
-  }, [location.pathname])
-
-  useEffect(() => {
+useEffect(() => {
     const updateScrolled = () => {
       setScrolled(window.scrollY > 12)
     }
