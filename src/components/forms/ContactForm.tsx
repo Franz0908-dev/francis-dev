@@ -57,7 +57,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="inline-flex h-12 items-center gap-2 rounded-xl bg-violet-600 px-6 text-sm font-semibold text-white transition hover:bg-violet-500"
+        className="inline-flex h-12 w-full items-center justify-center gap-2 sm:w-auto rounded-xl bg-violet-600 px-6 text-sm font-semibold text-white transition hover:bg-violet-500"
       >
         Send Message
         <Send size={17} />

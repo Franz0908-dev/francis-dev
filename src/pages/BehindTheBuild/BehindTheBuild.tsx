@@ -215,7 +215,7 @@ export default function BehindTheBuild() {
           >
             <Badge variant="purple">Behind the Build</Badge>
 
-            <h1 className="mt-7 text-6xl font-bold leading-[1.02] tracking-[-0.055em] text-white">
+            <h1 className="mt-7 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl lg:leading-[1.02] tracking-[-0.055em] text-white">
               How FRANCIS.DEV was
               <GradientText> planned and built.</GradientText>
             </h1>
@@ -227,7 +227,7 @@ export default function BehindTheBuild() {
             </p>
           </motion.div>
 
-          <div className="mt-16 grid grid-cols-4 gap-5">
+          <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {[
               {
                 value: '10',
@@ -268,7 +268,7 @@ export default function BehindTheBuild() {
             description="The portfolio was divided into clear phases so design, content, components, and development could be completed without losing consistency."
           />
 
-          <div className="mt-14 grid grid-cols-3 gap-6">
+          <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {developmentStages.map(
               ({ icon: Icon, number, title, description, items }, index) => (
                 <motion.article
@@ -331,7 +331,7 @@ export default function BehindTheBuild() {
             align="center"
           />
 
-          <div className="mt-12 grid grid-cols-3 gap-6">
+          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             {engineeringDecisions.map(
               ({ icon: Icon, title, description }) => (
                 <GlassCard key={title} hoverable className="p-7">
@@ -355,7 +355,7 @@ export default function BehindTheBuild() {
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-[0.72fr_1.28fr] items-start gap-16">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
             <SectionHeading
               eyebrow="Project Structure"
               title="A scalable React application organization."
@@ -401,7 +401,7 @@ export default function BehindTheBuild() {
 
       <Section spacing="lg">
         <Container>
-          <div className="grid grid-cols-[0.8fr_1.2fr] items-start gap-16">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <div>
               <SectionHeading
                 eyebrow="Technology Stack"
@@ -422,7 +422,7 @@ export default function BehindTheBuild() {
               </Link>
             </div>
 
-            <GlassCard className="p-8">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
               <div className="flex flex-wrap gap-3">
                 {uniqueStack.map((technology) => (
                   <TechBadge
@@ -446,7 +446,7 @@ export default function BehindTheBuild() {
             description="Building a larger portfolio required decisions around consistency, code quality, maintainability, and responsible AI usage."
           />
 
-          <div className="mt-12 grid grid-cols-2 gap-6">
+          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-6">
             {challenges.map(({ title, description, solution }, index) => (
               <motion.article
                 key={title}
@@ -495,14 +495,14 @@ export default function BehindTheBuild() {
 
       <Section spacing="lg">
         <Container>
-          <div className="grid grid-cols-[0.8fr_1.2fr] items-start gap-16">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <SectionHeading
               eyebrow="AI-Assisted Workflow"
               title="Faster development without surrendering technical control."
               description="AI helped accelerate planning, drafting, debugging, refactoring, and documentation, but every implementation still required review and verification."
             />
 
-            <GlassCard className="relative overflow-hidden p-8">
+            <GlassCard className="relative overflow-hidden p-5 sm:p-6 lg:p-8">
               <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-violet-500/20 blur-[90px]" />
 
               <div className="relative">
@@ -514,7 +514,7 @@ export default function BehindTheBuild() {
                   How AI supports the project
                 </h3>
 
-                <div className="mt-7 grid grid-cols-2 gap-4">
+                <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                   {[
                     'Planning and brainstorming',
                     'Code drafting and refactoring',
@@ -561,7 +561,7 @@ export default function BehindTheBuild() {
             align="center"
           />
 
-          <div className="mt-12 grid grid-cols-4 gap-5">
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {workflowRules.map((rule, index) => (
               <GlassCard key={rule} hoverable className="p-6">
                 <span className="text-sm font-bold text-violet-400/40">
@@ -579,8 +579,8 @@ export default function BehindTheBuild() {
 
       <Section spacing="lg">
         <Container>
-          <div className="grid grid-cols-3 gap-6">
-            <GlassCard className="p-8">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
               <Code2 size={25} className="text-violet-300" />
 
               <h3 className="mt-6 text-xl font-semibold text-white">
@@ -593,7 +593,7 @@ export default function BehindTheBuild() {
               </p>
             </GlassCard>
 
-            <GlassCard className="p-8">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
               <TestTube2 size={25} className="text-violet-300" />
 
               <h3 className="mt-6 text-xl font-semibold text-white">
@@ -607,7 +607,7 @@ export default function BehindTheBuild() {
               </p>
             </GlassCard>
 
-            <GlassCard className="p-8">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
               <ShieldCheck size={25} className="text-violet-300" />
 
               <h3 className="mt-6 text-xl font-semibold text-white">
@@ -628,13 +628,13 @@ export default function BehindTheBuild() {
           <div className="relative overflow-hidden rounded-3xl border border-violet-400/20 bg-gradient-to-br from-violet-600/20 via-purple-500/10 to-transparent px-12 py-14">
             <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-violet-500/25 blur-[90px]" />
 
-            <div className="relative flex items-center justify-between gap-12">
+            <div className="relative flex flex-col items-start gap-7 sm:gap-9 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
               <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
                   Explore the Result
                 </p>
 
-                <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white">
+                <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                   See how the process became a complete portfolio.
                 </h2>
 

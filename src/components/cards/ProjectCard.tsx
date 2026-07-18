@@ -21,7 +21,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <GlassCard hoverable className="flex h-full flex-col overflow-hidden">
-      <div className="h-56 overflow-hidden border-b border-white/[0.07] bg-white/[0.02]">
+      <div className="h-48 overflow-hidden sm:h-56 border-b border-white/[0.07] bg-white/[0.02]">
         {image ? (
           <img
             src={image}
@@ -35,7 +35,7 @@ export default function ProjectCard({
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
         <Badge variant="purple">{status}</Badge>
 
         <h3 className="mt-5 text-xl font-semibold text-white">{title}</h3>

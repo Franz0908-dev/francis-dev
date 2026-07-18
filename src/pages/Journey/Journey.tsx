@@ -100,7 +100,7 @@ export default function Journey() {
           >
             <Badge variant="purple">Development Journey</Badge>
 
-            <h1 className="mt-7 text-6xl font-bold leading-[1.02] tracking-[-0.055em] text-white">
+            <h1 className="mt-7 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl lg:leading-[1.02] tracking-[-0.055em] text-white">
               Learning through
               <GradientText> every project.</GradientText>
             </h1>
@@ -111,7 +111,7 @@ export default function Journey() {
             </p>
           </motion.div>
 
-          <div className="mt-14 grid grid-cols-3 gap-5">
+          <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
             <GlassCard className="p-6">
               <BookOpen size={22} className="text-violet-300" />
 
@@ -242,14 +242,14 @@ export default function Journey() {
 
       <Section spacing="lg">
         <Container>
-          <div className="grid grid-cols-[0.8fr_1.2fr] items-start gap-16">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <SectionHeading
               eyebrow="Lessons Along the Way"
               title="What every project taught me."
               description="Development is not only about finishing features. It is also about understanding mistakes, improving decisions, and building better workflows."
             />
 
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
               {journeyLessons.map(
                 ({ icon: Icon, title, description }) => (
                   <GlassCard
@@ -297,7 +297,7 @@ export default function Journey() {
           </div>
 
           <GlassCard className="mx-auto mt-12 max-w-4xl p-8">
-            <div className="grid grid-cols-[auto_1fr] items-start gap-6">
+            <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-[auto_1fr] sm:gap-6">
               <div className="rounded-2xl border border-violet-400/20 bg-violet-500/10 p-4 text-violet-300">
                 <BriefcaseBusiness size={27} />
               </div>
@@ -339,13 +339,13 @@ export default function Journey() {
           <div className="relative overflow-hidden rounded-3xl border border-violet-400/20 bg-gradient-to-br from-violet-600/20 via-purple-500/10 to-transparent px-12 py-14">
             <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-violet-500/25 blur-[90px]" />
 
-            <div className="relative flex items-center justify-between gap-12">
+            <div className="relative flex flex-col items-start gap-7 sm:gap-9 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
               <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
                   The Journey Continues
                 </p>
 
-                <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white">
+                <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                   Every new project creates the next milestone.
                 </h2>
 

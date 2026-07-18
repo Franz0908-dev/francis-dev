@@ -36,7 +36,7 @@ export default function FeaturedProject() {
         />
 
         <GlassCard className="mt-12 overflow-hidden p-8">
-          <div className="grid grid-cols-[0.86fr_1.14fr] items-center gap-12">
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:gap-12">
             <div>
               <Badge variant="purple">
                 {featuredProjectContent.status}

@@ -544,7 +544,7 @@ const [activeCategory, setActiveCategory] = useState<TechCategory>(
           >
             <Badge variant="purple">Technology Explorer</Badge>
 
-            <h1 className="mt-7 text-6xl font-bold leading-[1.02] tracking-[-0.055em] text-white">
+            <h1 className="mt-7 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl lg:leading-[1.02] tracking-[-0.055em] text-white">
               Tools I use to build
               <GradientText> modern software.</GradientText>
             </h1>
@@ -555,7 +555,7 @@ const [activeCategory, setActiveCategory] = useState<TechCategory>(
             </p>
           </motion.div>
 
-          <div className="mt-14 grid grid-cols-5 gap-4">
+          <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
             {techStackContent.map((group) => {
               const Icon =
                 categoryIcons[
@@ -606,7 +606,7 @@ const [activeCategory, setActiveCategory] = useState<TechCategory>(
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-[0.7fr_1.3fr] items-start gap-12">
+          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-12">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-violet-400">
                 {activeGroup.category}
@@ -677,7 +677,7 @@ const [activeCategory, setActiveCategory] = useState<TechCategory>(
                         Selected Technology
                       </Badge>
 
-                      <h2 className="mt-6 text-4xl font-bold tracking-[-0.04em] text-white">
+                      <h2 className="mt-6 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                         {selectedTechnology}
                       </h2>
 
@@ -740,7 +740,7 @@ const [activeCategory, setActiveCategory] = useState<TechCategory>(
                     </GlassCard>
                   </div>
 
-                  <div className="mt-8 grid grid-cols-2 gap-6">
+                  <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-6">
                     <div className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-6">
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-violet-400">
                         Favorite Features
@@ -809,7 +809,7 @@ const [activeCategory, setActiveCategory] = useState<TechCategory>(
             align="center"
           />
 
-          <div className="mt-12 grid grid-cols-5 gap-5">
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
             {techStackContent.map((group, groupIndex) => {
               const Icon =
                 categoryIcons[
@@ -857,7 +857,7 @@ const [activeCategory, setActiveCategory] = useState<TechCategory>(
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-[0.8fr_1.2fr] items-center gap-16">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <div>
               <Sparkles
                 size={30}
@@ -875,8 +875,8 @@ const [activeCategory, setActiveCategory] = useState<TechCategory>(
               </p>
             </div>
 
-            <GlassCard className="p-8">
-              <div className="grid grid-cols-2 gap-4">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                 {[
                   'Advanced Laravel workflows',
                   'React architecture patterns',
@@ -910,13 +910,13 @@ const [activeCategory, setActiveCategory] = useState<TechCategory>(
           <div className="relative overflow-hidden rounded-3xl border border-violet-400/20 bg-gradient-to-br from-violet-600/20 via-purple-500/10 to-transparent px-12 py-14">
             <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-violet-500/25 blur-[90px]" />
 
-            <div className="relative flex items-center justify-between gap-12">
+            <div className="relative flex flex-col items-start gap-7 sm:gap-9 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
               <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
                   See the Stack in Action
                 </p>
 
-                <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white">
+                <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                   Explore projects built using these technologies.
                 </h2>
 

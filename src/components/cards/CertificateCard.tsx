@@ -18,7 +18,7 @@ export default function CertificateCard({
 }: CertificateCardProps) {
   return (
     <GlassCard hoverable className="flex h-full flex-col overflow-hidden">
-      <div className="flex h-48 items-center justify-center border-b border-white/[0.07] bg-white/[0.02]">
+      <div className="flex h-44 items-center sm:h-48 justify-center border-b border-white/[0.07] bg-white/[0.02]">
         {image ? (
           <img
             src={image}
@@ -32,7 +32,7 @@ export default function CertificateCard({
         )}
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
         <p className="text-xs uppercase tracking-[0.16em] text-violet-400">
           {issuer}
         </p>
@@ -46,7 +46,7 @@ export default function CertificateCard({
             href={href}
             target="_blank"
             rel="noreferrer"
-            className="mt-auto inline-flex pt-5 items-center gap-2 text-sm font-semibold text-violet-300"
+            className="mt-auto inline-flex items-center pt-5 gap-2 text-sm font-semibold text-violet-300"
           >
             View Certificate
             <ExternalLink size={15} />

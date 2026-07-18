@@ -167,3 +167,33 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+/* Phase 11 responsive safety and touch polish */
+@media (max-width: 767px) {
+  .glass-panel {
+    border-radius: 16px;
+  }
+
+  .hero-grid {
+    background-size: 34px 34px;
+  }
+}
+
+@media (hover: none) {
+  .glass-panel {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 639px) {
+  button,
+  a[role='button'] {
+    min-height: 44px;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    overflow-wrap: anywhere;
+  }
+}

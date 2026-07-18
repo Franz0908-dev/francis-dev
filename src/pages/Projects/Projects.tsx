@@ -93,7 +93,7 @@ export default function Projects() {
           >
             <Badge variant="purple">Selected Work</Badge>
 
-            <h1 className="mt-7 text-6xl font-bold leading-[1.02] tracking-[-0.055em] text-white">
+            <h1 className="mt-7 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl lg:leading-[1.02] tracking-[-0.055em] text-white">
               Projects built around
               <GradientText> real workflows.</GradientText>
             </h1>
@@ -104,7 +104,7 @@ export default function Projects() {
             </p>
           </motion.div>
 
-          <div className="mt-14 grid grid-cols-[1fr_auto] items-center gap-6">
+          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-6">
             <label className="relative">
               <Search
                 size={18}
@@ -151,7 +151,7 @@ export default function Projects() {
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-[0.82fr_1.18fr] items-center gap-14">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
             <div>
               <Badge variant="success" className="gap-2">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_#34d399]" />
@@ -162,7 +162,7 @@ export default function Projects() {
                 Flagship Project
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white">
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                 {featuredProject.title}
               </h2>
 
@@ -263,7 +263,7 @@ export default function Projects() {
           />
 
           {filteredProjects.length > 0 ? (
-            <div className="mt-12 grid grid-cols-2 gap-6">
+            <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-6">
               {filteredProjects.map((project, index) => {
                 const Icon =
                   projectIcons[
@@ -355,7 +355,7 @@ export default function Projects() {
               })}
             </div>
           ) : (
-            <GlassCard className="mt-12 p-12 text-center">
+            <GlassCard className="mt-12 p-6 text-center sm:p-10 lg:p-12">
               <Search
                 size={42}
                 className="mx-auto text-violet-400/60"
@@ -386,7 +386,7 @@ export default function Projects() {
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-[0.8fr_1.2fr] items-center gap-14">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
             <div>
               <div className="inline-flex rounded-xl border border-violet-400/15 bg-violet-500/10 p-3 text-violet-300">
                 <Sparkles size={24} />
@@ -403,12 +403,12 @@ export default function Projects() {
               </p>
             </div>
 
-            <GlassCard className="p-8">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-violet-400">
                 What these projects demonstrate
               </p>
 
-              <div className="mt-7 grid grid-cols-2 gap-4">
+              <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                 {[
                   'Business workflow implementation',
                   'Frontend and backend integration',
@@ -435,13 +435,13 @@ export default function Projects() {
           <div className="relative overflow-hidden rounded-3xl border border-violet-400/20 bg-gradient-to-br from-violet-600/20 via-purple-500/10 to-transparent px-12 py-14">
             <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-violet-500/25 blur-[90px]" />
 
-            <div className="relative flex items-center justify-between gap-12">
+            <div className="relative flex flex-col items-start gap-7 sm:gap-9 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
               <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
                   Featured Case Study
                 </p>
 
-                <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white">
+                <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                   Explore how the Sales &amp; Inventory System was built.
                 </h2>
 

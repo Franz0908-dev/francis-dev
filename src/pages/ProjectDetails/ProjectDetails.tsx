@@ -156,7 +156,7 @@ export default function ProjectDetails() {
     return (
       <main className="flex min-h-[calc(100vh-80px)] items-center justify-center">
         <Container>
-          <GlassCard className="mx-auto max-w-2xl p-12 text-center">
+          <GlassCard className="mx-auto max-w-2xl p-6 text-center sm:p-10 lg:p-12">
             <Layers3
               size={48}
               className="mx-auto text-violet-400/60"
@@ -210,7 +210,7 @@ export default function ProjectDetails() {
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65 }}
-            className="mt-10 grid grid-cols-[0.9fr_1.1fr] items-center gap-16"
+            className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16"
           >
             <div>
               <Badge
@@ -223,7 +223,7 @@ export default function ProjectDetails() {
                 {project.status}
               </Badge>
 
-              <h1 className="mt-7 text-6xl font-bold leading-[1.02] tracking-[-0.055em] text-white">
+              <h1 className="mt-7 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl lg:leading-[1.02] tracking-[-0.055em] text-white">
                 {project.shortTitle}
                 <GradientText> Case Study.</GradientText>
               </h1>
@@ -232,7 +232,7 @@ export default function ProjectDetails() {
                 {project.description}
               </p>
 
-              <div className="mt-8 grid grid-cols-2 gap-4">
+              <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                 <GlassCard className="p-5">
                   <UserRound size={19} className="text-violet-300" />
 
@@ -332,8 +332,8 @@ export default function ProjectDetails() {
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-2 gap-8">
-            <GlassCard hoverable className="p-8">
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-8">
+            <GlassCard hoverable className="p-5 sm:p-6 lg:p-8">
               <div className="mb-6 inline-flex rounded-xl border border-red-400/15 bg-red-500/10 p-3 text-red-300">
                 <Wrench size={23} />
               </div>
@@ -347,7 +347,7 @@ export default function ProjectDetails() {
               </p>
             </GlassCard>
 
-            <GlassCard hoverable className="p-8">
+            <GlassCard hoverable className="p-5 sm:p-6 lg:p-8">
               <div className="mb-6 inline-flex rounded-xl border border-emerald-400/15 bg-emerald-500/10 p-3 text-emerald-300">
                 <Lightbulb size={23} />
               </div>
@@ -372,7 +372,7 @@ export default function ProjectDetails() {
             description={`The ${project.title} includes the following main capabilities.`}
           />
 
-          <div className="mt-12 grid grid-cols-3 gap-5">
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
             {project.features.map((feature, index) => (
               <motion.div
                 key={feature}
@@ -401,14 +401,14 @@ export default function ProjectDetails() {
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-[0.82fr_1.18fr] items-start gap-16">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
             <SectionHeading
               eyebrow="Architecture"
               title="A clear structure for maintainable development."
               description="The project combines interface, application, and database technologies based on its requirements."
             />
 
-            <GlassCard className="p-8">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
               <div className="space-y-4">
                 {caseStudy.architecture.map((architectureItem) => (
                   <div
@@ -439,7 +439,7 @@ export default function ProjectDetails() {
             description="Building software involves more than completing features. Each project creates opportunities to improve technical decisions and workflow understanding."
           />
 
-          <div className="mt-12 grid grid-cols-3 gap-6">
+          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             <GlassCard className="p-7">
               <div className="inline-flex rounded-xl border border-amber-400/15 bg-amber-500/10 p-3 text-amber-300">
                 <Wrench size={22} />
@@ -520,7 +520,7 @@ export default function ProjectDetails() {
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-[0.8fr_1.2fr] items-center gap-16">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <div>
               <ShieldCheck size={30} className="text-violet-300" />
 
@@ -534,7 +534,7 @@ export default function ProjectDetails() {
               </p>
             </div>
 
-            <GlassCard className="p-8">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
               <div className="flex flex-wrap gap-3">
                 {project.technologies.map((technology) => (
                   <TechBadge
@@ -555,13 +555,13 @@ export default function ProjectDetails() {
           <div className="relative overflow-hidden rounded-3xl border border-violet-400/20 bg-gradient-to-br from-violet-600/20 via-purple-500/10 to-transparent px-12 py-14">
             <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-violet-500/25 blur-[90px]" />
 
-            <div className="relative flex items-center justify-between gap-12">
+            <div className="relative flex flex-col items-start gap-7 sm:gap-9 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
               <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
                   Continue Exploring
                 </p>
 
-                <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white">
+                <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                   Explore more development projects.
                 </h2>
 

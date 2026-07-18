@@ -235,7 +235,7 @@ export default function Playground() {
         <Container className="relative">
           <Badge variant="purple">Developer Playground</Badge>
 
-          <h1 className="mt-7 max-w-5xl text-6xl font-bold leading-[1.02] tracking-[-0.055em] text-white">
+          <h1 className="mt-7 max-w-5xl text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl lg:leading-[1.02] tracking-[-0.055em] text-white">
             Small tools built for
             <GradientText> developers.</GradientText>
           </h1>
@@ -245,7 +245,7 @@ export default function Playground() {
             TypeScript logic, browser APIs, validation, and interface design.
           </p>
 
-          <div className="mt-14 grid grid-cols-5 gap-4">
+          <div className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
             {tools.map(({ id, label, description, icon: Icon }) => {
               const isActive = activeTool === id
 
@@ -289,7 +289,7 @@ export default function Playground() {
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-[0.34fr_0.66fr] items-start gap-8">
+          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[0.34fr_0.66fr] lg:gap-8">
             <GlassCard className="p-7">
               <div className="inline-flex rounded-xl border border-violet-400/15 bg-violet-500/10 p-3 text-violet-300">
                 <activeToolDetails.icon size={24} />
@@ -326,7 +326,7 @@ export default function Playground() {
               </div>
             </GlassCard>
 
-            <GlassCard className="min-h-[620px] p-8">
+            <GlassCard className="min-h-[500px] p-5 sm:p-6 lg:min-h-[620px] lg:p-8">
               {activeTool === 'password' && (
                 <div>
                   <SectionHeading
@@ -444,7 +444,7 @@ export default function Playground() {
                     description="Paste JSON data, validate its syntax, and convert it into readable or compact formatting."
                   />
 
-                  <div className="mt-8 grid grid-cols-2 gap-5">
+                  <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
                     <label className="space-y-3">
                       <span className="text-sm text-slate-400">
                         JSON Input
@@ -525,7 +525,7 @@ export default function Playground() {
                     description="Enter a regular expression and test it against sample text."
                   />
 
-                  <div className="mt-8 grid grid-cols-[1fr_0.22fr] gap-4">
+                  <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-[1fr_0.22fr]">
                     <label className="space-y-3">
                       <span className="text-sm text-slate-400">
                         Pattern
@@ -612,7 +612,7 @@ export default function Playground() {
                     style={{ background: gradientValue }}
                   />
 
-                  <div className="mt-8 grid grid-cols-3 gap-5">
+                  <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
                     <label className="space-y-3">
                       <span className="text-sm text-slate-400">
                         Start Color
@@ -763,7 +763,7 @@ export default function Playground() {
             align="center"
           />
 
-          <div className="mt-12 grid grid-cols-4 gap-5">
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {[
               'React State Management',
               'TypeScript Type Safety',

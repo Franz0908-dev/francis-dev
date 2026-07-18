@@ -63,7 +63,7 @@ export default function About() {
           >
             <Badge variant="purple">{aboutContent.eyebrow}</Badge>
 
-            <h1 className="mt-7 text-6xl font-bold leading-[1.02] tracking-[-0.055em] text-white">
+            <h1 className="mt-7 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl lg:leading-[1.02] tracking-[-0.055em] text-white">
               Building software with
               <GradientText> purpose.</GradientText>
             </h1>
@@ -73,7 +73,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="mt-16 grid grid-cols-[0.8fr_1.2fr] items-center gap-16">
+          <div className="mt-16 grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -84,7 +84,7 @@ export default function About() {
               <div className="absolute inset-8 rounded-full bg-violet-500/25 blur-[100px]" />
 
               <GlassCard className="relative overflow-hidden p-3">
-                <div className="relative h-[560px] overflow-hidden rounded-2xl">
+                <div className="relative h-[380px] sm:h-[480px] lg:h-[560px] overflow-hidden rounded-2xl">
                   <img
                     src="/images/profile/francis-about.png"
                     alt="Francis Lee Recanil working as a web developer"
@@ -163,8 +163,8 @@ export default function About() {
 
       <Section className="border-y border-white/[0.06] bg-white/[0.012]">
         <Container>
-          <div className="grid grid-cols-2 gap-8">
-            <GlassCard hoverable className="p-8">
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-8">
+            <GlassCard hoverable className="p-5 sm:p-6 lg:p-8">
               <div className="mb-6 inline-flex rounded-xl border border-violet-400/15 bg-violet-500/10 p-3 text-violet-300">
                 <Target size={23} />
               </div>
@@ -178,7 +178,7 @@ export default function About() {
               </p>
             </GlassCard>
 
-            <GlassCard hoverable className="p-8">
+            <GlassCard hoverable className="p-5 sm:p-6 lg:p-8">
               <div className="mb-6 inline-flex rounded-xl border border-violet-400/15 bg-violet-500/10 p-3 text-violet-300">
                 <Workflow size={23} />
               </div>
@@ -197,14 +197,14 @@ export default function About() {
 
       <Section spacing="lg">
         <Container>
-          <div className="grid grid-cols-[0.9fr_1.1fr] items-start gap-16">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <SectionHeading
               eyebrow="AI-Assisted Development"
               title="AI improves the workflow. Engineering decisions remain mine."
               description={aboutContent.aiWorkflow}
             />
 
-            <GlassCard className="p-8">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-violet-400">
                 Professional Values
               </p>
@@ -249,7 +249,7 @@ export default function About() {
 
       <Section spacing="lg">
         <Container>
-          <div className="grid grid-cols-[0.75fr_1.25fr] gap-20">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
             <div>
               <SectionHeading
                 eyebrow="Development Journey"
@@ -277,13 +277,13 @@ export default function About() {
           <div className="relative overflow-hidden rounded-3xl border border-violet-400/20 bg-gradient-to-br from-violet-600/20 via-purple-500/10 to-transparent px-12 py-14">
             <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-violet-500/25 blur-[90px]" />
 
-            <div className="relative flex items-center justify-between gap-12">
+            <div className="relative flex flex-col items-start gap-7 sm:gap-9 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
               <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
                   Explore My Work
                 </p>
 
-                <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white">
+                <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                   See how these skills are applied in real projects.
                 </h2>
 

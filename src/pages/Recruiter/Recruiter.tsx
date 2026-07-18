@@ -172,7 +172,7 @@ export default function Recruiter() {
             </div>
           </div>
 
-          <section className="mt-24">
+          <section className="mt-16 sm:mt-20 lg:mt-24">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-violet-400">
               Technical Skills
             </p>
@@ -193,7 +193,7 @@ export default function Recruiter() {
             </div>
           </section>
 
-          <section className="mt-24 rounded-[2rem] border border-violet-400/15 bg-violet-500/[0.06] p-7 sm:p-10">
+          <section className="mt-16 sm:mt-20 lg:mt-24 rounded-[2rem] border border-violet-400/15 bg-violet-500/[0.06] p-7 sm:p-10">
             <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-violet-400">
@@ -246,7 +246,7 @@ export default function Recruiter() {
             </div>
           </section>
 
-          <section className="mt-24 grid gap-6 lg:grid-cols-2">
+          <section className="mt-16 sm:mt-20 lg:mt-24 grid gap-6 lg:grid-cols-2">
             <div className="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-7">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-400">
                 Preferred Roles

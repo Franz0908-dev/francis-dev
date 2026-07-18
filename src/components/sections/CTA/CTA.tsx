@@ -11,13 +11,13 @@ export default function CTA() {
           <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-violet-500/25 blur-[100px]" />
           <div className="pointer-events-none absolute -bottom-24 left-1/3 h-56 w-56 rounded-full bg-purple-500/15 blur-[90px]" />
 
-          <div className="relative flex items-center justify-between gap-12">
+          <div className="relative flex flex-col items-start gap-7 sm:gap-9 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
                 Let&apos;s work together
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white">
+              <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                 {contactContent.title}
               </h2>
 

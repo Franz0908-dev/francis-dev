@@ -99,7 +99,7 @@ export default function Contact() {
               {contactContent.eyebrow}
             </p>
 
-            <h1 className="mt-4 text-6xl font-bold leading-[1.02] tracking-[-0.055em] text-white">
+            <h1 className="mt-4 text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl lg:leading-[1.02] tracking-[-0.055em] text-white">
               Let&apos;s start a
               <GradientText> conversation.</GradientText>
             </h1>
@@ -182,7 +182,7 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.65, delay: 0.08 }}
             >
-              <GlassCard className="relative overflow-hidden p-8">
+              <GlassCard className="relative overflow-hidden p-5 sm:p-6 lg:p-8">
                 <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-violet-500/20 blur-[100px]" />
 
                 <div className="relative">
@@ -205,7 +205,7 @@ export default function Contact() {
                   </div>
 
                   <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-                    <div className="grid grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
                       <label className="space-y-2">
                         <span className="text-sm text-slate-400">
                           {contactContent.form.nameLabel}
@@ -316,7 +316,7 @@ export default function Contact() {
             align="center"
           />
 
-          <div className="mt-12 grid grid-cols-4 gap-5">
+          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {[
               {
                 title: 'Internships',
@@ -357,7 +357,7 @@ export default function Contact() {
 
       <Section spacing="lg">
         <Container>
-          <div className="grid grid-cols-[0.8fr_1.2fr] items-center gap-16">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <div>
               <Mail size={30} className="text-violet-300" />
 
@@ -371,8 +371,8 @@ export default function Contact() {
               </p>
             </div>
 
-            <GlassCard className="p-8">
-              <div className="grid grid-cols-2 gap-4">
+            <GlassCard className="p-5 sm:p-6 lg:p-8">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                 <Link
                   to="/recruiter"
                   className="group rounded-2xl border border-white/[0.08] bg-white/[0.025] p-6 transition hover:-translate-y-0.5 hover:border-violet-400/25 hover:bg-white/[0.045]"
@@ -439,13 +439,13 @@ export default function Contact() {
           <div className="relative overflow-hidden rounded-3xl border border-violet-400/20 bg-gradient-to-br from-violet-600/20 via-purple-500/10 to-transparent px-12 py-14">
             <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-violet-500/25 blur-[90px]" />
 
-            <div className="relative flex items-center justify-between gap-12">
+            <div className="relative flex flex-col items-start gap-7 sm:gap-9 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
               <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
                   Let&apos;s Connect
                 </p>
 
-                <h2 className="mt-4 text-4xl font-bold tracking-[-0.04em] text-white">
+                <h2 className="mt-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl text-white">
                   Ready to discuss a role, project, or collaboration?
                 </h2>
 

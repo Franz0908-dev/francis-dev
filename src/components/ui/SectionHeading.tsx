@@ -30,12 +30,12 @@ export default function SectionHeading({
         </p>
       )}
 
-      <h2 className="text-4xl font-bold tracking-[-0.04em] text-white">
+      <h2 className="text-3xl font-bold tracking-[-0.04em] text-white sm:text-4xl">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-5 text-lg leading-8 text-slate-400">
+        <p className="mt-4 text-base leading-7 sm:mt-5 sm:text-lg sm:leading-8 text-slate-400">
           {description}
         </p>
       )}
