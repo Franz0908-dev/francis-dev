@@ -358,3 +358,130 @@ a[aria-disabled='true'] {
   }
 }
 
+
+/* Phase 12.4 - global reveal animations and page polish */
+
+.page-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-shell::before {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgb(124 58 237 / 0.07),
+      transparent 32rem
+    ),
+    radial-gradient(
+      circle at 88% 42%,
+      rgb(168 85 247 / 0.055),
+      transparent 34rem
+    );
+}
+
+.page-shell section {
+  position: relative;
+}
+
+.section-heading {
+  position: relative;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.section-eyebrow::before {
+  width: 1.75rem;
+  height: 1px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(167 139 250 / 0),
+    rgb(167 139 250 / 0.9)
+  );
+}
+
+.text-center .section-eyebrow::after {
+  width: 1.75rem;
+  height: 1px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(167 139 250 / 0.9),
+    rgb(167 139 250 / 0)
+  );
+}
+
+.section-title {
+  text-wrap: balance;
+}
+
+.section-description {
+  text-wrap: pretty;
+}
+
+.page-shell input,
+.page-shell textarea,
+.page-shell select {
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.page-shell input:hover,
+.page-shell textarea:hover,
+.page-shell select:hover {
+  border-color: rgb(255 255 255 / 0.16);
+}
+
+.page-shell input:focus,
+.page-shell textarea:focus,
+.page-shell select:focus {
+  box-shadow:
+    0 0 0 3px rgb(139 92 246 / 0.09),
+    0 16px 40px rgb(2 6 23 / 0.18);
+}
+
+.page-shell img {
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 639px) {
+  .page-shell section {
+    scroll-margin-top: 5.5rem;
+  }
+
+  .section-title {
+    letter-spacing: -0.035em;
+  }
+
+  .section-eyebrow::before,
+  .text-center .section-eyebrow::after {
+    width: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-shell *,
+  .page-shell *::before,
+  .page-shell *::after {
+    scroll-behavior: auto !important;
+  }
+
+  .page-shell input,
+  .page-shell textarea,
+  .page-shell select {
+    transition-duration: 0.01ms !important;
+  }
+}

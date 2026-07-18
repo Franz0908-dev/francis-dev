@@ -46,7 +46,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <main className="overflow-hidden">
+    <main className="page-shell overflow-hidden">
       <section className="relative overflow-hidden pb-24 pt-24">
         <div className="pointer-events-none absolute inset-0">
           <div className="hero-grid absolute inset-0 opacity-30" />
@@ -261,7 +261,7 @@ export default function About() {
                 to="/journey"
                 className="mt-8 inline-flex items-center text-sm font-semibold text-violet-300 transition hover:text-violet-200"
               >
-                View Full Journey →
+                View Full Journey â†’
               </Link>
             </div>
 

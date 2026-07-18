@@ -9,7 +9,7 @@ import {
 
 export default function Home() {
   return (
-    <main>
+    <main className="page-shell overflow-hidden">
       <Hero />
       <TechMarquee />
       <FeaturedProject />

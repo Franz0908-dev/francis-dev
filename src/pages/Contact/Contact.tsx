@@ -73,7 +73,7 @@ export default function Contact() {
   }
 
   return (
-    <main className="overflow-hidden">
+    <main className="page-shell overflow-hidden">
       <section className="relative overflow-hidden pb-24 pt-24">
         <div className="pointer-events-none absolute inset-0">
           <div className="hero-grid absolute inset-0 opacity-35" />
