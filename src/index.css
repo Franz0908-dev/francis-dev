@@ -197,3 +197,67 @@ img {
     overflow-wrap: anywhere;
   }
 }
+
+/* Phase 12 premium interaction polish */
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-padding-top: 96px;
+}
+
+body {
+  isolation: isolate;
+}
+
+main {
+  min-height: 70vh;
+}
+
+a,
+button {
+  touch-action: manipulation;
+}
+
+button:disabled,
+a[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .surface-card,
+  .glass-panel {
+    transition:
+      transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 300ms ease,
+      box-shadow 300ms ease,
+      background-color 300ms ease;
+  }
+
+  .surface-card:hover,
+  .glass-panel:hover {
+    border-color: rgba(167, 139, 250, 0.18);
+  }
+}
+
+@media (max-width: 639px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  .surface-card,
+  .glass-panel {
+    box-shadow:
+      0 18px 55px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion='decorative'] {
+    display: none;
+  }
+}
