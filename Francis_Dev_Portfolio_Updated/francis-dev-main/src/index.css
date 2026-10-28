@@ -1,0 +1,487 @@
+﻿@import "tailwindcss";
+@import "./styles/utilities.css";
+@import "./styles/animations.css";
+
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #ffffff;
+  background: #050816;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  background: #050816;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 80% 8%, rgba(124, 58, 237, 0.09), transparent 27%),
+    #050816;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.55);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.055) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.purple-gradient-text {
+  background: linear-gradient(115deg, #c4b5fd 0%, #a855f7 46%, #7c3aed 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.018)
+    );
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(22px);
+}
+/* FRANCIS.DEV PHASE 8.5 POLISH */
+
+html {
+  scroll-behavior: smooth;
+  background: #050816;
+}
+
+body {
+  min-width: 320px;
+  background: #050816;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.35);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 4px;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.55) #050816;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 3px solid #050816;
+  border-radius: 999px;
+  background: rgba(139, 92, 246, 0.55);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 139, 250, 0.75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* Phase 11 responsive safety and touch polish */
+@media (max-width: 767px) {
+  .glass-panel {
+    border-radius: 16px;
+  }
+
+  .hero-grid {
+    background-size: 34px 34px;
+  }
+}
+
+@media (hover: none) {
+  .glass-panel {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 639px) {
+  button,
+  a[role='button'] {
+    min-height: 44px;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Phase 12 premium interaction polish */
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-padding-top: 96px;
+}
+
+body {
+  isolation: isolate;
+}
+
+main {
+  min-height: 70vh;
+}
+
+a,
+button {
+  touch-action: manipulation;
+}
+
+button:disabled,
+a[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .surface-card,
+  .glass-panel {
+    transition:
+      transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 300ms ease,
+      box-shadow 300ms ease,
+      background-color 300ms ease;
+  }
+
+  .surface-card:hover,
+  .glass-panel:hover {
+    border-color: rgba(167, 139, 250, 0.18);
+  }
+}
+
+@media (max-width: 639px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  .surface-card,
+  .glass-panel {
+    box-shadow:
+      0 18px 55px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion='decorative'] {
+    display: none;
+  }
+}
+
+/* Phase 12.3 â€” project cards, buttons, and reveal polish */
+
+.project-card {
+  transform: translateZ(0);
+  border-color: rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.052),
+      rgba(255, 255, 255, 0.018)
+    );
+  box-shadow:
+    0 24px 75px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.project-card-image::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.025);
+}
+
+.premium-button {
+  transform: translateZ(0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.premium-button:focus-visible,
+.project-link:focus-visible {
+  outline: 2px solid rgba(196, 181, 253, 0.95);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card {
+    transition:
+      transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 400ms ease,
+      box-shadow 400ms ease,
+      background-color 400ms ease;
+  }
+
+  .group:hover > .project-card,
+  .project-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(167, 139, 250, 0.22);
+    box-shadow:
+      0 32px 95px rgba(0, 0, 0, 0.3),
+      0 0 45px rgba(124, 58, 237, 0.09),
+      inset 0 1px 0 rgba(255, 255, 255, 0.065);
+  }
+
+  .premium-button:hover .premium-button-shine {
+    opacity: 1;
+    animation: premium-button-shine 700ms ease-out;
+  }
+}
+
+@keyframes premium-button-shine {
+  from {
+    left: -45%;
+  }
+
+  to {
+    left: 125%;
+  }
+}
+
+@media (max-width: 639px) {
+  .project-card {
+    border-radius: 18px;
+    box-shadow:
+      0 18px 55px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  }
+
+  .project-card h3 {
+    line-height: 1.3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .premium-button-shine {
+    display: none;
+  }
+
+  .project-card,
+  .project-card img,
+  .project-link,
+  .premium-button {
+    transform: none !important;
+  }
+}
+
+
+/* Phase 12.4 - global reveal animations and page polish */
+
+.page-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-shell::before {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgb(124 58 237 / 0.07),
+      transparent 32rem
+    ),
+    radial-gradient(
+      circle at 88% 42%,
+      rgb(168 85 247 / 0.055),
+      transparent 34rem
+    );
+}
+
+.page-shell section {
+  position: relative;
+}
+
+.section-heading {
+  position: relative;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.section-eyebrow::before {
+  width: 1.75rem;
+  height: 1px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(167 139 250 / 0),
+    rgb(167 139 250 / 0.9)
+  );
+}
+
+.text-center .section-eyebrow::after {
+  width: 1.75rem;
+  height: 1px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(167 139 250 / 0.9),
+    rgb(167 139 250 / 0)
+  );
+}
+
+.section-title {
+  text-wrap: balance;
+}
+
+.section-description {
+  text-wrap: pretty;
+}
+
+.page-shell input,
+.page-shell textarea,
+.page-shell select {
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.page-shell input:hover,
+.page-shell textarea:hover,
+.page-shell select:hover {
+  border-color: rgb(255 255 255 / 0.16);
+}
+
+.page-shell input:focus,
+.page-shell textarea:focus,
+.page-shell select:focus {
+  box-shadow:
+    0 0 0 3px rgb(139 92 246 / 0.09),
+    0 16px 40px rgb(2 6 23 / 0.18);
+}
+
+.page-shell img {
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 639px) {
+  .page-shell section {
+    scroll-margin-top: 5.5rem;
+  }
+
+  .section-title {
+    letter-spacing: -0.035em;
+  }
+
+  .section-eyebrow::before,
+  .text-center .section-eyebrow::after {
+    width: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-shell *,
+  .page-shell *::before,
+  .page-shell *::after {
+    scroll-behavior: auto !important;
+  }
+
+  .page-shell input,
+  .page-shell textarea,
+  .page-shell select {
+    transition-duration: 0.01ms !important;
+  }
+}

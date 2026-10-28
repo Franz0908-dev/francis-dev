@@ -1,0 +1,6 @@
+export { default as CTA } from './CTA/CTA'
+export { default as FeaturedProject } from './FeaturedProject/FeaturedProject'
+export { default as Hero } from './Hero/Hero'
+export { default as Stats } from './Stats/Stats'
+export { default as TechMarquee } from './TechMarquee/TechMarquee'
+export { default as WhyHireMe } from './WhyHireMe/WhyHireMe'
